@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADALIN</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Cormorant Garamond & Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #fdfbf7 0%, #f7f3eb 50%, #fefefe 100%);
+            min-height: 100vh;
+        }
+
+        .font-serif-title {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        /* Gold accents */
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #b8860b 0%, #d4af37 50%, #aa7c11 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gold-border {
+            border-color: rgba(212, 175, 55, 0.3);
+        }
+
+        /* Glassmorphism Card Effect */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(212, 175, 55, 0.25);
+            box-shadow: 0 20px 40px rgba(184, 134, 11, 0.08), 0 8px 16px rgba(0, 0, 0, 0.03);
+        }
+
+        /* Kaspi Crimson Button Styling */
+        .btn-kaspi {
+            background: linear-gradient(135deg, #f14635 0%, #e1251b 100%);
+            box-shadow: 0 10px 20px rgba(225, 37, 27, 0.25);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .btn-kaspi:hover {
+            background: linear-gradient(135deg, #ff5343 0%, #ed2d23 100%);
+            box-shadow: 0 14px 28px rgba(225, 37, 27, 0.35);
+            transform: translateY(-2px);
+        }
+
+        .btn-kaspi:active {
+            transform: translateY(1px);
+            box-shadow: 0 6px 12px rgba(225, 37, 27, 0.2);
+        }
+
+        /* White Elegance Button Styling */
+        .btn-white {
+            background: #ffffff;
+            color: #2d3748;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .btn-white:hover {
+            border-color: rgba(212, 175, 55, 0.6);
+            box-shadow: 0 12px 25px rgba(212, 175, 55, 0.15);
+            transform: translateY(-2px);
+            background: #fcfbf9;
+        }
+
+        .btn-white:active {
+            transform: translateY(1px);
+        }
+
+        /* Subtle floating background lights */
+        .ambient-glow-1 {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 320px;
+            height: 320px;
+            background: radial-gradient(circle, rgba(243, 229, 192, 0.45) 0%, rgba(255,255,255,0) 70%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .ambient-glow-2 {
+            position: absolute;
+            bottom: 10%;
+            right: 15%;
+            width: 250px;
+            height: 250px;
+            background: radial-gradient(circle, rgba(228, 206, 150, 0.3) 0%, rgba(255,255,255,0) 70%);
+            z-index: 0;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4 sm:p-6 relative overflow-x-hidden">
+
+    <div class="ambient-glow-1"></div>
+    <div class="ambient-glow-2"></div>
+
+    <!-- MAIN CONTAINER CARD -->
+    <main class="glass-card w-full max-w-md rounded-3xl p-8 sm:p-10 text-center relative z-10 my-auto">
+        
+        <!-- Header / Logo Area -->
+        <header class="mb-8">
+            <div class="inline-block mb-3 p-3 rounded-full bg-amber-50/80 border gold-border shadow-sm">
+                <i class="fa-solid fa-gem text-amber-600 text-xl"></i>
+            </div>
+            <h1 class="font-serif-title text-4xl sm:text-5xl font-bold tracking-widest gold-gradient-text uppercase mb-2">
+                ADALIN
+            </h1>
+            <p class="text-xs uppercase tracking-widest text-stone-500 font-medium">Добро пожаловать</p>
+        </header>
+
+        <!-- Main Action Buttons -->
+        <section class="space-y-4 mb-9">
+            <!-- Kaspi Button -->
+            <a href="https://l.kaspi.kz/shop/9guWhfybRuWAoV1?sessionId=c4515067-3456-40ae-a42f-03256ad3341e1790873628" 
+               target="_blank" 
+               rel="noopener noreferrer"
+               class="btn-kaspi w-full py-4 px-6 rounded-2xl text-white font-medium text-base sm:text-lg flex items-center justify-center gap-3 transition tracking-wide group">
+                <i class="fa-solid fa-bag-shopping text-xl transition-transform group-hover:scale-110"></i>
+                <span>Перейти на Kaspi магазин</span>
+            </a>
+
+            <!-- WhatsApp Button -->
+            <a href="http://wa.me/+77070250350" 
+               target="_blank" 
+               rel="noopener noreferrer"
+               class="btn-white w-full py-4 px-6 rounded-2xl font-medium text-base sm:text-lg flex items-center justify-center gap-3 transition tracking-wide group">
+                <i class="fa-brands fa-whatsapp text-2xl text-emerald-500 transition-transform group-hover:scale-110"></i>
+                <span>Перейти в WhatsApp</span>
+            </a>
+        </section>
+
+        <div class="relative flex py-2 items-center mb-6">
+            <div class="flex-grow border-t border-amber-200/50"></div>
+            <span class="flex-shrink mx-4 text-xs uppercase tracking-wider text-amber-800/40 font-semibold">Контакты и сети</span>
+            <div class="flex-grow border-t border-amber-200/50"></div>
+        </div>
+
+        <!-- Social Media embedded handles section -->
+        <section class="space-y-4 text-left">
+            <!-- Instagram Link -->
+            <div class="flex items-center justify-between p-3.5 rounded-xl bg-white/60 border border-stone-200/60 hover:border-amber-300 transition-colors">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 flex items-center justify-center text-white text-base shadow-sm">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                    <span class="text-xs sm:text-sm font-medium text-stone-600">Instagram:</span>
+                </div>
+                <a href="https://www.instagram.com/adelline.aa?stkn=MXRiMGJ1cjF3ZnhyMQ%3D%3D&utm_source=qr" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="font-semibold text-sm sm:text-base text-amber-900 hover:text-amber-600 transition-colors underline decoration-amber-300 decoration-1 underline-offset-4">
+                    adalin.kzz
+                </a>
+            </div>
+
+            <!-- TikTok Link -->
+            <div class="flex items-center justify-between p-3.5 rounded-xl bg-white/60 border border-stone-200/60 hover:border-amber-300 transition-colors">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-full bg-black flex items-center justify-center text-white text-base shadow-sm">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </div>
+                    <span class="text-xs sm:text-sm font-medium text-stone-600">TikTok:</span>
+                </div>
+                <a href="https://www.tiktok.com/@adalin.kz?_r=1&_t=ZS-9AFhnKXsAon" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="font-semibold text-sm sm:text-base text-amber-900 hover:text-amber-600 transition-colors underline decoration-amber-300 decoration-1 underline-offset-4">
+                    adalin.kz
+                </a>
+            </div>
+
+            <!-- WhatsApp Number Link -->
+            <div class="flex items-center justify-between p-3.5 rounded-xl bg-white/60 border border-stone-200/60 hover:border-amber-300 transition-colors">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-full bg-emerald-500 flex items-center justify-center text-white text-base shadow-sm">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <span class="text-xs sm:text-sm font-medium text-stone-600">WhatsApp:</span>
+                </div>
+                <a href="http://wa.me/+77070250350" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="font-semibold text-xs sm:text-sm text-amber-900 hover:text-amber-600 transition-colors underline decoration-amber-300 decoration-1 underline-offset-4">
+                    +7 707 025 03 50
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="mt-8 pt-4 text-center">
+            <p class="text-[11px] text-stone-400 tracking-wider font-light">
+                &copy; ADALIN. Все права защищены.
+            </p>
+        </footer>
+
+    </main>
+
+</body>
+</html>
